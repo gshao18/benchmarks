@@ -1,8 +1,8 @@
-//Source: https://github.com/attractivechaos/plb2/blob/master/src/python/nqueen.py
+#Source: https://github.com/attractivechaos/plb2/blob/master/src/python/nqueen.py
 
 #!/usr/bin/env python
 
-import sys
+import time
 
 def nq_solve(n):
 	m = 0
@@ -35,8 +35,11 @@ def nq_solve(n):
 	return m
 
 def main():
-	n = 15
-	if (len(sys.argv) > 1): n = int(sys.argv[1])
-	print(nq_solve(n))
+	for i in range (4):
+		start = time.time()
+		print(nq_solve(15))
+		end = time.time()
+		execution_time = end - start
+		print(str(round(execution_time, 4)).replace(".",","))
 
 if __name__ == '__main__': main()
