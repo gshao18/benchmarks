@@ -137,9 +137,9 @@ def main(n):
     for i in range(n):
         for l in a:
             if len(l) >= 81:
-                print(l)
+                #print(l)
                 ret = sd_solve(R, C, l)
-                print(ret)
+                # print(ret)
                 break
                     #if i == 1: print(ret)
                     # for j in ret:
@@ -148,14 +148,14 @@ def main(n):
 
 
 
-main(1)
 # BENCHMARKING:
-# import time
+import time
 
-# for i in range(20):
-#     start_time = time.time()
-#     main(20)
-#     end_time = time.time()
+for i in range(100):
+    print(len(a))
+    start_time = time.time()
+    main(1)
+    end_time = time.time()
     
-#     execution_time = end_time - start_time
-#     print(str(round(execution_time, 4)).replace(".",","))
+    execution_time = end_time - start_time
+    print(str(round(execution_time, 4)))
