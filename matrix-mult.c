@@ -62,17 +62,17 @@ int main()
   clock_t start_time, end_time;
   double execution_time;
   
-  for (int i = 0; i < 500; i++)
+  for (int i = 0; i < 100; i++)
     {
       start_time = clock();
       for (int iter = 0; iter < 100; iter++){
-	benchmark(10);	
+		benchmark(100);	
       }
       end_time = clock();
       
       execution_time = ((double) (end_time - start_time)) / CLOCKS_PER_SEC;
       
-      printf("%f\n", execution_time*1000);
+      printf("%f\n", execution_time);
     }
 
   return 0;

@@ -24,13 +24,12 @@ def main(n):
 
 
 # BENCHMARKING: Input size: 10, 50, and 100 
-for i in range(500):
+for i in range(100):
     start_time = time.time()
     #main(50)
     for iter in range(100):
-        main(10)
+        main(100)
     end_time = time.time()
     execution_time = end_time - start_time
 
-    exec_ms = int(execution_time*1000)
-    print(exec_ms)
+    print(str(round(execution_time, 4)))

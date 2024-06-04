@@ -37,7 +37,7 @@ def nq_solve(n):
 def main():
 	for i in range (4):
 		start = time.time()
-		print(nq_solve(15))
+		print(nq_solve(12))
 		end = time.time()
 		execution_time = end - start
 		print(str(round(execution_time, 4)).replace(".",","))

@@ -47,10 +47,10 @@ def main(arg):
 # BENCHMARKING:
 import time
 
-for i in range(10):
+for i in range(100):
     start_time = time.time()
-    main(15)
+    main(17)
     end_time = time.time()
     execution_time = end_time - start_time
-    print(str(round(execution_time, 4)).replace(".",","))
+    print(str(round(execution_time, 4)))
 

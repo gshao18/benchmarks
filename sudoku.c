@@ -249,7 +249,7 @@ int main()
   clock_t start_time, end_time;
   double execution_time;
   
-  for (int i = 0; i < 20; i++)
+  for (int i = 0; i < 100; i++)
     {
       start_time = clock();
       benchmark(20);

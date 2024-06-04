@@ -90,15 +90,13 @@ def main(arg):
                 tot_cov += cov
         print(tot_cov)
 
-
-main(100)
 # BENCHMARKING:
-# import time
+import time
 
-# for i in range(10):
-#     start_time = time.time()
-#     main(15)
-#     end_time = time.time()
-#     execution_time = end_time - start_time
-#     print(str(round(execution_time, 4)).replace(".",","))
+for i in range(100):
+    start_time = time.time()
+    main(10)
+    end_time = time.time()
+    execution_time = end_time - start_time
+    print(str(round(execution_time, 4)))
 

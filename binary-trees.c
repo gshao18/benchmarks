@@ -135,10 +135,10 @@ int main()
   clock_t start_time, end_time;
   double execution_time;
   
-  for (int i = 0; i < 10; i++)
+  for (int i = 0; i < 100; i++)
     {
       start_time = clock();
-      benchmark(21);
+      benchmark(17);
       end_time = clock();
       
       execution_time = ((double) (end_time - start_time)) / CLOCKS_PER_SEC;

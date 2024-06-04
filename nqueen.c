@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <time.h>
 
 #define NQ_MAX 31
 
@@ -34,9 +35,15 @@ static int nq_solve(int n) // inspired the 2nd C implementation from Rossetta Co
 
 int main(int argc, char *argv[])
 {
-	int n = 15;
-	if (argc > 1) n = atoi(argv[1]);
-	if (n > NQ_MAX || n <= 0) abort();
-	printf("%d\n", nq_solve(n));
+	for (int i = 0; i < 5; i++) {
+		clock_t t;
+		int n = 15;
+		if (argc > 1) n = atoi(argv[1]);
+		if (n > NQ_MAX || n <= 0) abort();
+		t = clock();
+		nq_solve(n);
+		t = clock() - t;
+		printf("Time: %f\n", ((double)t)/CLOCKS_PER_SEC);
+	}
 	return 0;
 }
